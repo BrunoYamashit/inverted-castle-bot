@@ -1,0 +1,19 @@
+{
+  "name": "inverted-castle-bot",
+  "version": "1.0.0",
+  "description": "BOT",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "BOT",
+    "NodeJs"
+  ],
+  "author": "BRUNO YAMASHITA",
+  "license": "ISC"
+}
