@@ -3,22 +3,39 @@
   "version": "1.0.0",
   "description": "BOT",
   "main": "index.js",
-  "dependencies": {
-    "@types/node": "^15.12.5",
-    "@types/ws": "^7.4.5",
-    "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0",
-    "nodemon": "^2.0.9",
-    "typescript": "^4.3.4"
-  },
-  "devDependencies": {},
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev --transpile-only --poll --respawn src/index.ts",
+    "build": "tsc",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "keywords": [
     "BOT",
     "NodeJs"
   ],
   "author": "BRUNO YAMASHITA",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^15.12.5",
+    "@types/ws": "^7.4.5",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint"
+  }
 }
